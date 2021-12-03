@@ -1,0 +1,2 @@
+class AnxietiesController < ApplicationController
+end
