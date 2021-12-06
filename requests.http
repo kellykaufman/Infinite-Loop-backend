@@ -1,5 +1,4 @@
 ### USERS CREATE (SIGNUP)
-
 POST http://localhost:3000/users.as_json
 Content-Type: application/json
 
@@ -8,4 +7,14 @@ Content-Type: application/json
   "email": "kk@example.com",
   "password": "123abc",
   "password_confirmation": "123abc"
+}
+
+
+### CREATES A SESSION (LOGIN)
+POST http://localhost:3000/users.as_json
+Content-Type: application/json
+
+{
+  "email": "kk@example.com",
+  "password": "123abc",
 }
