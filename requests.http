@@ -11,10 +11,25 @@ Content-Type: application/json
 
 
 ### CREATES A SESSION (LOGIN)
-POST http://localhost:3000/users.as_json
+POST http://localhost:3000/sessions.as_json
 Content-Type: application/json
 
 {
   "email": "kk@example.com",
-  "password": "123abc",
+  "password": "123abc"
+}
+
+
+### CREATES AN ANXIETY
+POST http://localhost:3000/anxieties.as_json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Mzg5MDIwNTV9.g60xQFvgPmrgbPk12ygtzTRyj61dPjg5GDa13OSGXHI
+Content-Type: application/json
+
+{
+ "life_theme": "Work, School", 
+ "intrusive_thought_or_feeling": "That I won't learn everything I need to succeed at my job", 
+ "anxiety_theme": "CATASTROPHIZING, ALL OR NOTHING, PERFECTIONISM", 
+ "opposite_action": "READ", 
+ "timer": 15, 
+ "progress": "Success"
 }
