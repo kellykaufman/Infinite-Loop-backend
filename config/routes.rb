@@ -11,6 +11,10 @@ Rails.application.routes.draw do
   #USER ROUTES
   post "/users" => "users#create"
 
+  patch "/users/:id" => "users#update"
+
+  delete "/users/:id" => "users#destroy"
+
   #SESSION ROUTES
   post "/sessions" => "sessions#create"
 end

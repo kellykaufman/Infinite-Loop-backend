@@ -1,4 +1,6 @@
 class AnxietiesController < ApplicationController
+  before_action :authenticate_user
+
   def index
     anxiety = Anxiety.all
     render json: anxiety
@@ -29,5 +31,12 @@ class AnxietiesController < ApplicationController
     else
       render json: { errors: anxiety.errors.full_messages }, status: 422
     end
+  end
+
+  def destroy
+    anxiety = Anxiety.find_by(id: params[:id])
+
+    anxiety.destroy
+    render json: { message: "Anxiety deleted." }
   end
 end

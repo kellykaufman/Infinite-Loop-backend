@@ -1,17 +1,33 @@
 ### USERS CREATE (SIGNUP)
-POST http://localhost:3000/users.as_json
+POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "full_name": "Kelly Kaufman",
-  "email": "kk@example.com",
-  "password": "123abc",
-  "password_confirmation": "123abc"
+  "full_name": "Angelo",
+  "email": "ang@example.com",
+  "password": "yooo",
+  "password_confirmation": "yooo"
 }
+
+### UPDATES USER ACCOUNT
+PATCH http://localhost:3000/users/2.json
+Content-Type: application/json
+
+{
+  "full_name": "Mike Miller",
+  "email": "mm@example.com",
+  "password": "clue",
+  "password_confirmation": "clue"
+}
+
+### DELETES USER ACCOUNT
+# DELETE http://localhost:3000/users/3.json
+# Content-Type: application/json
+
 
 
 ### CREATES A SESSION (LOGIN)
-POST http://localhost:3000/sessions.as_json
+POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
@@ -19,17 +35,45 @@ Content-Type: application/json
   "password": "123abc"
 }
 
+### ANXIETY INDEX
+GET http://localhost:3000/anxieties.json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Mzg5MDIwNTV9.g60xQFvgPmrgbPk12ygtzTRyj61dPjg5GDa13OSGXHI
+Content-Type: application/json
+
+
 
 ### CREATES AN ANXIETY
-POST http://localhost:3000/anxieties.as_json 
+POST http://localhost:3000/anxieties.json 
+
+Content-Type: application/json
+
+{
+ "life_theme": "world", 
+ "intrusive_thought_or_feeling": "I'm afraid the earth will collapse", 
+ "anxiety_theme": "CATASTROPHIZING, MAGNIFYING", 
+ "opposite_action": "somersaults", 
+ "timer": 5, 
+ "progress": "Success"
+}
+
+
+### UPDATES AN ANXIETY
+PATCH http://localhost:3000/anxieties/4.json 
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Mzg5MDIwNTV9.g60xQFvgPmrgbPk12ygtzTRyj61dPjg5GDa13OSGXHI
 Content-Type: application/json
 
 {
- "life_theme": "Work, School", 
- "intrusive_thought_or_feeling": "That I won't learn everything I need to succeed at my job", 
- "anxiety_theme": "CATASTROPHIZING, ALL OR NOTHING, PERFECTIONISM", 
- "opposite_action": "READ", 
- "timer": 15, 
+ "life_theme": "world", 
+ "intrusive_thought_or_feeling": "I'm afraid elephants are pink", 
+ "anxiety_theme": "CATASTROPHIZING, MAGNIFYING, TUNNEL VISION", 
+ "opposite_action": "Ride a ferris wheel", 
+ "timer": 3, 
  "progress": "Success"
 }
+
+
+### DELETES AN ANXIETY
+DELETE http://localhost:3000/anxieties/8.json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Mzg5MDIwNTV9.g60xQFvgPmrgbPk12ygtzTRyj61dPjg5GDa13OSGXHI
+Content-Type: application/json
+
