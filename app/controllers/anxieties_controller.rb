@@ -7,7 +7,15 @@ class AnxietiesController < ApplicationController
   end
 
   def create
-    anxiety = Anxiety.new(life_theme: params[:life_theme], intrusive_thought_or_feeling: params[:intrusive_thought_or_feeling], anxiety_theme: params[:anxiety_theme], opposite_action: params[:opposite_action], timer: params[:timer], progress: params[:progress], user_id: params[:user_id])
+    anxiety = Anxiety.new(
+      life_theme: params[:life_theme],
+      intrusive_thought_or_feeling: params[:intrusive_thought_or_feeling],
+      anxiety_theme: params[:anxiety_theme],
+      opposite_action: params[:opposite_action],
+      timer: params[:timer],
+      progress: params[:progress],
+      user_id: current_user.id,
+    )
 
     if anxiety.save
       render json: anxiety, status: :created
@@ -25,6 +33,7 @@ class AnxietiesController < ApplicationController
     anxiety.opposite_action = params[:opposite_action] || anxiety.opposite_action
     anxiety.timer = params[:timer] || anxiety.timer
     anxiety.progress = params[:progress] || anxiety.progress
+    anxiety.user_id = current_user.id || anxiety.user_id
 
     if anxiety.save
       render json: anxiety
@@ -34,7 +43,7 @@ class AnxietiesController < ApplicationController
   end
 
   def destroy
-    anxiety = Anxiety.find_by(id: params[:id])
+    anxiety = Anxiety.current_user
 
     anxiety.destroy
     render json: { message: "Anxiety deleted." }

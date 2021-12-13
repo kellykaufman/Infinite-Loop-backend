@@ -37,44 +37,43 @@ Content-Type: application/json
 
 ### ANXIETY INDEX
 GET http://localhost:3000/anxieties.json 
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzkzNTM1OTN9.VIDaVJ_3COLGulHKYGO9_PSBzRoukRhAVwFbG-kL2o0
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzkzNTUzMTN9.5xxCxIdxHPAmZaNp3xH_BKqeHYeV_23OsLxma_aZnFE
 Content-Type: application/json
 
 
 
 ### CREATES AN ANXIETY
 POST http://localhost:3000/anxieties.json 
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzkzNTM1OTN9.VIDaVJ_3COLGulHKYGO9_PSBzRoukRhAVwFbG-kL2o0
-
-Content-Type: application/json
-# MUST FIX, this is supposed to be able to create
-{
- "life_theme": , 
- "intrusive_thought_or_feeling": "I'm afraid I won't get a job", 
- "anxiety_theme": , 
- "opposite_action": , 
- "timer":, 
- "progress":
-}
-
-
-### UPDATES AN ANXIETY
-PATCH http://localhost:3000/anxieties/4.json 
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzkxODc2OTJ9.5jjGUIvJ2J2GOnK-0dCykQhwpNH1btvrBYvxN9NBLjQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Mzk1MDI4MjB9.NiQJFa_pETQito7PRj9ALwVfsp9CLiz6dKlZoe7Wem4
 Content-Type: application/json
 
 {
  "life_theme": "world", 
- "intrusive_thought_or_feeling": "I'm afraid elephants are pink", 
- "anxiety_theme": "CATASTROPHIZING, MAGNIFYING, TUNNEL VISION", 
- "opposite_action": "Ride a ferris wheel", 
+ "intrusive_thought_or_feeling": "I'm afraid the roads are too narrow", 
+ "anxiety_theme": "TUNNEL VISION", 
+ "opposite_action": "Make a smoothie", 
+ "timer": 1, 
+ "progress": "Failed"
+}
+
+
+### UPDATES AN ANXIETY
+PATCH http://localhost:3000/anxieties/11.json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Mzk1MDI4MjB9.NiQJFa_pETQito7PRj9ALwVfsp9CLiz6dKlZoe7Wem4
+Content-Type: application/json
+
+{
+ "life_theme": "Food", 
+ "intrusive_thought_or_feeling": "I'm afraid I will never eat Chinese food again", 
+ "anxiety_theme": "CATASTROPHIZING", 
+ "opposite_action": "Eat Chinese Food", 
  "timer": 3, 
  "progress": "Success"
 }
 
 
 ### DELETES AN ANXIETY
-DELETE http://localhost:3000/anxieties/7.json 
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzkwOTc4NzV9.hle0LgmwIUUQYDg4ySqP1LiMlo6HShuKRjTdlWNidF0
+DELETE http://localhost:3000/anxieties/2.json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Mzk1MDI4MjB9.NiQJFa_pETQito7PRj9ALwVfsp9CLiz6dKlZoe7Wem4
 Content-Type: application/json
 
