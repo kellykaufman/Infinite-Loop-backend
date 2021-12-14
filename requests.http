@@ -1,28 +1,27 @@
 ### USERS CREATE (SIGNUP)
+# WORKS!
 POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "full_name": "Angelo",
-  "email": "ang@example.com",
-  "password": "yooo",
-  "password_confirmation": "yooo"
+  "full_name": "Jonathan B",
+  "email": "jb@example.com",
+  "password": "zoo",
+  "password_confirmation": "zoo"
 }
 
 ### UPDATES USER ACCOUNT
+# WORKS!
 PATCH http://localhost:3000/users/2.json
 Content-Type: application/json
 
 {
-  "full_name": "Mike Miller",
-  "email": "mm@example.com",
-  "password": "clue",
-  "password_confirmation": "clue"
+  "full_name": "Amanda Hale",
+  "email": "am@example.com",
+  "password": "boo",
+  "password_confirmation": "boo"
 }
 
-### DELETES USER ACCOUNT
-# DELETE http://localhost:3000/users/3.json
-# Content-Type: application/json
 
 
 
@@ -31,20 +30,22 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "kk@example.com",
-  "password": "123abc"
+  "email": "jb@example.com",
+  "password": "zoo"
 }
 
 ### ANXIETY INDEX
+# WORKS!
 GET http://localhost:3000/anxieties.json 
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzkzNTUzMTN9.5xxCxIdxHPAmZaNp3xH_BKqeHYeV_23OsLxma_aZnFE
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo4LCJleHAiOjE2Mzk1MTAzNTN9.1iEhG28lztSuNtrEEYcciDaoj-Vizuk2Wk3GrGCffr0
 Content-Type: application/json
 
 
 
 ### CREATES AN ANXIETY
+# WORKS!
 POST http://localhost:3000/anxieties.json 
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Mzk1MDI4MjB9.NiQJFa_pETQito7PRj9ALwVfsp9CLiz6dKlZoe7Wem4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo4LCJleHAiOjE2Mzk1MTAzNTN9.1iEhG28lztSuNtrEEYcciDaoj-Vizuk2Wk3GrGCffr0
 Content-Type: application/json
 
 {
@@ -58,8 +59,9 @@ Content-Type: application/json
 
 
 ### UPDATES AN ANXIETY
-PATCH http://localhost:3000/anxieties/11.json 
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Mzk1MDI4MjB9.NiQJFa_pETQito7PRj9ALwVfsp9CLiz6dKlZoe7Wem4
+# WORKS!
+PATCH http://localhost:3000/anxieties/3.json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo4LCJleHAiOjE2Mzk1MTAzNTN9.1iEhG28lztSuNtrEEYcciDaoj-Vizuk2Wk3GrGCffr0
 Content-Type: application/json
 
 {
@@ -73,7 +75,8 @@ Content-Type: application/json
 
 
 ### DELETES AN ANXIETY
-DELETE http://localhost:3000/anxieties/2.json 
+# WORKS!
+DELETE http://localhost:3000/anxieties/11.json 
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Mzk1MDI4MjB9.NiQJFa_pETQito7PRj9ALwVfsp9CLiz6dKlZoe7Wem4
 Content-Type: application/json
 

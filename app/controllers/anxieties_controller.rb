@@ -2,8 +2,9 @@ class AnxietiesController < ApplicationController
   before_action :authenticate_user
 
   def index
-    anxiety = Anxiety.all
-    render json: anxiety
+    user = User.find_by(id: current_user.id)
+    anxieties = user.anxieties.all
+    render json: anxieties
   end
 
   def create
@@ -43,9 +44,9 @@ class AnxietiesController < ApplicationController
   end
 
   def destroy
-    anxiety = Anxiety.current_user
+    anxiety = Anxiety.find_by(id: params[:id])
 
-    anxiety.destroy
+    anxiety.delete
     render json: { message: "Anxiety deleted." }
   end
 end
