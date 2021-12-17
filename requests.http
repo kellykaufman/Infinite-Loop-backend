@@ -37,9 +37,15 @@ Content-Type: application/json
 ### ANXIETY INDEX
 # WORKS!
 GET http://localhost:3000/anxieties.json 
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo4LCJleHAiOjE2Mzk1MTAzNTN9.1iEhG28lztSuNtrEEYcciDaoj-Vizuk2Wk3GrGCffr0
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo4LCJleHAiOjE2Mzk4NTcxNDd9.kmSSspPaylM9S_UefHC0ej7VO3smBIHQ5TW8dEPY9wI
 Content-Type: application/json
 
+
+### ANXIETY SHOW
+# WORKS!
+GET http://localhost:3000/anxieties/15.json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo4LCJleHAiOjE2Mzk4NTcxNDd9.kmSSspPaylM9S_UefHC0ej7VO3smBIHQ5TW8dEPY9wI
+Content-Type: application/json
 
 
 ### CREATES AN ANXIETY

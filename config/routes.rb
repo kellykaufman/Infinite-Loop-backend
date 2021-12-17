@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   #ANXIETY ROUTES
   get "/anxieties" => "anxieties#index"
 
+  get "/anxieties/:id" => "anxieties#show"
+
   post "/anxieties" => "anxieties#create"
 
   patch "/anxieties/:id" => "anxieties#update"

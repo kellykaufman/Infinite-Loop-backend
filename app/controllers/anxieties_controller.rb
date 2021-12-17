@@ -7,6 +7,11 @@ class AnxietiesController < ApplicationController
     render json: anxieties
   end
 
+  def show
+    anxieties = Anxiety.find_by(id: params[:id])
+    render json: anxieties
+  end
+
   def create
     anxiety = Anxiety.new(
       life_theme: params[:life_theme],
