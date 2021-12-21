@@ -3,7 +3,7 @@ class AnxietiesController < ApplicationController
 
   def index
     user = User.find_by(id: current_user.id)
-    anxieties = user.anxieties.all
+    anxieties = user.anxieties.order(created_at: :asc)
     render json: anxieties
   end
 
