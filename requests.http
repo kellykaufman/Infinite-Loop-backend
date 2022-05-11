@@ -4,10 +4,10 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "full_name": "Jonathan B",
-  "email": "jb@example.com",
-  "password": "zoo",
-  "password_confirmation": "zoo"
+  "full_name": "Kookie",
+  "email": "kookie@example.com",
+  "password": "password",
+  "password_confirmation": "password"
 }
 
 ### UPDATES USER ACCOUNT
